@@ -17,7 +17,7 @@ class hash_api {
   Halo<std::string, std::string> *t;
 #endif
   hash_api(size_t sz = 16 * 1024 * 1024) {
-    PM_PATH = "/mnt/pmem/hash/HaLo/";
+    PM_PATH = "/mnt/pmem0/hash/HaLo/";
 #ifdef NONVAR
     t = new Halo<size_t, size_t>(sz);
 #elif VARVALUE
@@ -196,7 +196,7 @@ class hash_api {
 
  public:
   hash_api(size_t sz = 1024 * 16, int tnum = 32) {
-    const char *path = "/mnt/pmem/pmem.data ";
+    const char *path = "/mnt/pmem0/pmem.data ";
     if (!std::filesystem::exists(path))
       pop =
           nvobj::pool<root>::create(path, LAYOUT, pool_size, S_IWUSR | S_IRUSR);

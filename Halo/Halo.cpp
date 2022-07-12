@@ -10,6 +10,8 @@
 
 namespace HALO {
 
+string PM_PATH = "/mnt/pmem0/HaLo/";
+
 #define ROUND_UP(s, n) (((s) + (n)-1) & (~(n - 1)))
 
 MemoryManagerPool memory_manager_Pool;
